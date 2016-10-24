@@ -7,7 +7,7 @@ var Navigation = () => {
       <div className="top-bar-left">
         <ul className="menu">
           <li className="menu-text">
-            React Boilerplate Final
+            Todo App
           </li>
           <li>
             <IndexLink to="/" activeClassName="active-link">Example</IndexLink>

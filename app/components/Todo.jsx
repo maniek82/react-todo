@@ -4,7 +4,7 @@ var Todo = React.createClass ({
 	render: function () {
 		var {text, id} = this.props;
 		return (
-			<div>
+			<div className="callout warning">
 			{id}. {text}
 			
 			</div>

@@ -13,7 +13,7 @@ var TodoList = React.createClass ({
 			});
 		};
 		return (
-			<div>
+			<div className="callout primary">
 			{renderTodos()}
 			</div>
 			)

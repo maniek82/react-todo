@@ -19,4 +19,14 @@ describe('AddTodo', ()=> {
 		TestUtils.Simulate.submit($el.find('form')[0]);
 		expect(spy).toHaveBeenCalledWith('check mail');
 	});
+
+	it('should not call onAddTodo prop with invalid data',()=> {
+		var spy = expect.createSpy();
+		var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
+		var $el = $(ReactDOM.findDOMNode(addTodo));
+
+		addTodo.refs.todoText.value='';
+		TestUtils.Simulate.submit($el.find('form')[0]);
+		expect(spy).toNotHaveBeenCalled();
+	});
 });
